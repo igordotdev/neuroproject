@@ -4,13 +4,13 @@
   import { onMount } from 'svelte';
   import { goto } from '$app/navigation';
 	import Navbar from '$lib/components/Navbar.svelte';
-	import { onDestroy } from 'svelte';
 
   let unsubscribe;
 
   onMount(() => {
     unsubscribe = user.subscribe((currentUser) => {
       if (!currentUser) {
+        // Redirect to the login page if the user is not authenticated
         goto('/login');
       }
     });
@@ -22,6 +22,7 @@
   });
 </script>
 
+<Navbar />
 
 {#if $user}
   <slot />
