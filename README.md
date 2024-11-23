@@ -1,5 +1,6 @@
 # neuroproject
 
+## TO RUN:
 ```bash
 cd neurosvelte
 npm install
