@@ -3,6 +3,7 @@
   import { Button } from "$lib/components/ui/button";
   import { onMount } from 'svelte';
   import { writable } from 'svelte/store';
+  import { page } from '$app/stores'; // Added import
 
   const navigationLinks = [
     // Removed existing links
@@ -21,8 +22,10 @@
     <!-- Logo -->
     <a href="/" class="text-xl font-bold text-white">NeuroCo</a>
     <div class="hidden md:flex space-x-4">
-      <Button href="/contact" variant="default" class="bg-transparent hover:underline hover:bg-transparent duration-200">Contact</Button>
-      <Button href="/login" variant="secondary" class="hover:bg-gray-200 transition-colors duration-200">Login</Button>
+      {#if $page.url.pathname === '/'} <!-- Conditionally render buttons only on the homepage -->
+        <Button href="/contact" variant="default" class="bg-transparent hover:underline hover:bg-transparent duration-200">Contact</Button>
+        <Button href="/login" variant="secondary" class="hover:bg-gray-200 transition-colors duration-200">Login</Button>
+      {/if}
     </div>
   </div>
 </nav>

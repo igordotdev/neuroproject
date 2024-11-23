@@ -46,11 +46,11 @@
 			</Card.Root>
 			<Card.Root class="bg-zinc-900 border-transparent">
 				<Card.Header class="text-white text-2xl text-center">
-					<Card.Title> Personalized guidance and support </Card.Title>
+					<Card.Title> Improved wellbeing of both parties </Card.Title>
 				</Card.Header>
 				<Card.Content>
 						<p class="text-white text-center">
-							Using Vertex AI, we created most innovative AI model that bases on extensive research to provide best practices and support.
+							NeuroCo is beneficial for all - students, teachers, parents, principals. Everyone is taken into the account to maximise accessibility.
 						</p>
 				</Card.Content>
 			</Card.Root>
